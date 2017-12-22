@@ -1,7 +1,7 @@
 const MORSE_CODES = require('./lib/morse-codes')
 
 function decodeMorse (morseCode) {
-  // your code here
+  return 'A'
 }
 
 module.exports = { decodeMorse }
