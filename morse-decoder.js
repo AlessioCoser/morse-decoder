@@ -17,11 +17,11 @@ function morseToAscii (morseChar) {
 }
 
 function toMorseChars (string) {
-  return string.split(MORSE_CHAR_SEPARATOR)
+  return string.trim().split(MORSE_CHAR_SEPARATOR)
 }
 
 function toMorseWords (string) {
-  return string.split(MORSE_WORD_SEPARATOR)
+  return string.trim().split(MORSE_WORD_SEPARATOR)
 }
 
 module.exports = { decodeMorse }
