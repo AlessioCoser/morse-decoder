@@ -1,5 +1,5 @@
 const { equal } = require('assert')
-const { Morse, decodeMorse } = require('../morse-decoder')
+const { Morse } = require('../morse-decoder')
 let morse = new Morse()
 
 test('can translate a letter from morse to Text', function () {
@@ -13,13 +13,13 @@ test('can translate more letters using char separator', function () {
 })
 
 test('can translate more words using triple char separator', function () {
-  equal(decodeMorse('.- --.-   .- --.-'), 'AQ AQ')
+  equal(morse.decode('.- --.-   .- --.-'), 'AQ AQ')
 })
 
 test('spaces after and before morse code are trimmed', function () {
-  equal(decodeMorse('   .- --.-   .- --.- '), 'AQ AQ')
+  equal(morse.decode('   .- --.-   .- --.- '), 'AQ AQ')
 })
 
 test('Example from description', function () {
-  equal(decodeMorse('.... . -.--   .--- ..- -.. .'), 'HEY JUDE')
+  equal(morse.decode('.... . -.--   .--- ..- -.. .'), 'HEY JUDE')
 })
