@@ -5,14 +5,14 @@ const MORSE_WORD_SEPARATOR = '   '
 const MORSE_CHAR_SEPARATOR = ' '
 
 function decodeMorse (morseCode) {
-  return toMorseWords(morseCode).map((morseWord) => decodeChars(morseWord)).join(WORD_SEPARATOR)
+  return toMorseWords(morseCode).map(decodeWord).join(WORD_SEPARATOR)
 }
 
-function decodeChars (morseWord) {
-  return toMorseChars(morseWord).map((morseChar) => morseToAscii(morseChar)).join(CHAR_SEPARATOR)
+function decodeWord (morseWord) {
+  return toMorseChars(morseWord).map(decodeChar).join(CHAR_SEPARATOR)
 }
 
-function morseToAscii (morseChar) {
+function decodeChar (morseChar) {
   return MORSE_CODES[morseChar]
 }
 
