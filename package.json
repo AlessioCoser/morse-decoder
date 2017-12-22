@@ -1,0 +1,19 @@
+{
+  "name": "morse-decoder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "morse-decoder.js",
+  "scripts": {
+    "test": "m.test test/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "m.test": "0.0.57"
+  },
+  "standard": {
+    "globals": [
+      "test"
+    ]
+  }
+}
