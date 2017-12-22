@@ -11,6 +11,10 @@ test('can translate more letters using char separator', function () {
   equal(decodeMorse('.- --.- .-'), 'AQA')
 })
 
+test('can translate more words using triple char separator', function () {
+  equal(decodeMorse('.- --.-   .- --.-'), 'AQ AQ')
+})
+
 test.skip('Example from description', function () {
   equal(decodeMorse('.... . -.--   .--- ..- -.. .'), 'HEY JUDE')
 })
