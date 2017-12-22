@@ -6,7 +6,15 @@ const MORSE_CHAR_SEPARATOR = ' '
 
 class Morse {
   decode (code) {
-    return this.decodeChar(code)
+    return this.decodeWord(code)
+  }
+
+  decodeWord (morseWord) {
+    return this.toMorseChars(morseWord).map(this.decodeChar).join(CHAR_SEPARATOR)
+  }
+
+  toMorseChars (string) {
+    return string.trim().split(MORSE_CHAR_SEPARATOR)
   }
 
   decodeChar (morseChar) {

@@ -8,8 +8,8 @@ test('can translate a letter from morse to Text', function () {
 })
 
 test('can translate more letters using char separator', function () {
-  equal(decodeMorse('.- --.-'), 'AQ')
-  equal(decodeMorse('.- --.- .-'), 'AQA')
+  equal(morse.decode('.- --.-'), 'AQ')
+  equal(morse.decode('.- --.- .-'), 'AQA')
 })
 
 test('can translate more words using triple char separator', function () {
