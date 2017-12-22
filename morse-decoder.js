@@ -9,22 +9,22 @@ class Morse {
   }
 
   decode (code) {
-    return this.toWords(code).map(this.decodeWord.bind(this)).join(ASCII_WORD_SEPARATOR)
+    return this._toWords(code).map(this._decodeWord.bind(this)).join(ASCII_WORD_SEPARATOR)
   }
 
-  decodeWord (word) {
-    return this.toChars(word).map(this.decodeChar.bind(this)).join(ASCII_CHAR_SEPARATOR)
+  _decodeWord (word) {
+    return this._toChars(word).map(this._decodeChar.bind(this)).join(ASCII_CHAR_SEPARATOR)
   }
 
-  decodeChar (morseChar) {
+  _decodeChar (morseChar) {
     return this.CODES[morseChar]
   }
 
-  toWords (string) {
+  _toWords (string) {
     return string.trim().split(MORSE_WORD_SEPARATOR)
   }
 
-  toChars (string) {
+  _toChars (string) {
     return string.trim().split(MORSE_CHAR_SEPARATOR)
   }
 }
