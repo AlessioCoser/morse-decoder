@@ -29,4 +29,4 @@ class Morse {
   }
 }
 
-module.exports = { Morse }
+exports.Morse = Morse
