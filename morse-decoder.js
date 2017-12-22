@@ -4,6 +4,16 @@ const CHAR_SEPARATOR = ''
 const MORSE_WORD_SEPARATOR = '   '
 const MORSE_CHAR_SEPARATOR = ' '
 
+class Morse {
+  decode (code) {
+    return this.decodeChar(code)
+  }
+
+  decodeChar (morseChar) {
+    return MORSE_CODES[morseChar]
+  }
+}
+
 function decodeMorse (morseCode) {
   return toMorseWords(morseCode).map(decodeWord).join(WORD_SEPARATOR)
 }
@@ -24,4 +34,4 @@ function toMorseWords (string) {
   return string.trim().split(MORSE_WORD_SEPARATOR)
 }
 
-module.exports = { decodeMorse }
+module.exports = { Morse, decodeMorse }
