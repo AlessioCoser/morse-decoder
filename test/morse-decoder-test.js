@@ -15,6 +15,6 @@ test('can translate more words using triple char separator', function () {
   equal(decodeMorse('.- --.-   .- --.-'), 'AQ AQ')
 })
 
-test.skip('Example from description', function () {
+test('Example from description', function () {
   equal(decodeMorse('.... . -.--   .--- ..- -.. .'), 'HEY JUDE')
 })

@@ -1,22 +1,27 @@
 const MORSE_CODES = require('./lib/morse-codes')
-const WORD_SEPARATOR = '   '
-const CHAR_SEPARATOR = ' '
+const WORD_SEPARATOR = ' '
+const CHAR_SEPARATOR = ''
+const MORSE_WORD_SEPARATOR = '   '
+const MORSE_CHAR_SEPARATOR = ' '
 
 function decodeMorse (morseCode) {
-  let words = morseCode.split(WORD_SEPARATOR)
-
-  return decodeWords(words)
+  return toMorseWords(morseCode).map((morseWord) => decodeChars(morseWord)).join(WORD_SEPARATOR)
 }
 
-function decodeWords (words) {
-  return words.reduce((text, word) => {
-    let chars = word.split(CHAR_SEPARATOR)
-    return text + ' ' + decodeChars(chars)
-  }, String.prototype).trim()
+function decodeChars (morseWord) {
+  return toMorseChars(morseWord).map((morseChar) => morseToAscii(morseChar)).join(CHAR_SEPARATOR)
 }
 
-function decodeChars (chars) {
-  return chars.reduce((text, char) => text + MORSE_CODES[char], String.prototype)
+function morseToAscii (morseChar) {
+  return MORSE_CODES[morseChar]
+}
+
+function toMorseChars (string) {
+  return string.split(MORSE_CHAR_SEPARATOR)
+}
+
+function toMorseWords (string) {
+  return string.split(MORSE_WORD_SEPARATOR)
 }
 
 module.exports = { decodeMorse }
