@@ -1,5 +1,29 @@
 # Morse Code
 
+## Requirements
+- NodeJs >= 6 and npm installed
+
+## Install dependencies
+
+```
+npm install
+```
+
+## Run Tests
+
+```
+npm test
+```
+
+## Run Application
+
+```
+node index.js ".... . -.--   .--- ..- -.. ."
+# should print: HEY JUDE
+```
+
+---
+
 ## Part 1
 In this kata you have to write a simple Morse code decoder. While the Morse code is now mostly superceded by voice and digital data communication channels, it still has its use in some applications around the world.
 
