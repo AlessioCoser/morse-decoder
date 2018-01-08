@@ -1,5 +1,5 @@
 const { equal } = require('assert')
-const { Morse } = require('../morse-decoder')
+const { Morse } = require('../lib/morse-decoder')
 let morse = new Morse()
 
 test('can translate a letter from morse to Text', () => {
