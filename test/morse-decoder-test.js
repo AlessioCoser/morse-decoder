@@ -1,8 +1,9 @@
 const { equal } = require('assert')
-const { decodeMorse } = require('../morse-decoder')
+const { Morse } = require('../lib/morse-decoder')
+let morse = new Morse()
 
 test('Example from description', function () {
-  equal(decodeMorse('.... . -.--   .--- ..- -.. .'), 'HEY JUDE')
+  equal(morse.decode('.... . -.--   .--- ..- -.. .'), 'HEY JUDE')
 })
 
 test('Your own tests', function () {

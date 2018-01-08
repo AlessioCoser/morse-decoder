@@ -2,7 +2,7 @@
   "name": "morse-decoder-kata",
   "version": "1.0.0",
   "description": "",
-  "main": "morse-decoder.js",
+  "main": "index.js",
   "scripts": {
     "test": "m.test test/*"
   },
