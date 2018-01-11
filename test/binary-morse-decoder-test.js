@@ -10,4 +10,8 @@ test('BinaryMorse', () => {
   test('can decode 111 to "-"', () => {
     equal(binaryMorse.decode('111'), '-')
   })
+
+  test('can decode pause between symbols', () => {
+    equal(binaryMorse.decode('10111'), '.-')
+  })
 })
