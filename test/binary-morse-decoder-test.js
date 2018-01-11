@@ -18,4 +18,8 @@ test('BinaryMorse', () => {
   test('can decode pause between chars', () => {
     equal(binaryMorse.decode('10111000111010101'), '.- -...')
   })
+
+  test('can decode space between words', () => {
+    equal(binaryMorse.decode('101110001110101010000010111'), '.- -...   .-')
+  })
 })
