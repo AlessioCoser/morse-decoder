@@ -95,6 +95,13 @@ Good luck!
 ## Part 3 - For real
 http://www.codewars.com/kata/decode-the-morse-code-for-real
 
+### Run Application
+
+```
+node index.js real 110011001100110000001100000011111100110011111100111111000000000011001111110011111100111111000000110011001111110000001111110011001100000011
+# should print: HEY JUDE
+```
+
 In this kata you have to deal with "real-life" scenarios, when Morse code transmission speed slightly varies throughout the message as it is sent by a non-perfect human operator. Also the sampling frequency may not be a multiple of the length of a typical "dot".
 For example, the message HEY JUDE, that is ···· · −·−−   ·−−− ··− −·· · may actually be received as follows:
 
