@@ -73,7 +73,7 @@ For this kata we assume the message receiving is performed automatically by the 
 
 For example, the message HEY JUDE, that is ···· · −·−−   ·−−− ··− −·· · may be received as follows:
 
-1100110011001100000011000000111111001100111111001111110000000000000011001111110011111100111111000000110011001111110000001111110011001100000011
+110011001100110000001100000011111100110011111100111111000000000011001111110011111100111111000000110011001111110000001111110011001100000011
 
 As you may see, this transmission is perfectly accurate according to the standard, and the hardware sampled the line exactly two times per "dot".
 
