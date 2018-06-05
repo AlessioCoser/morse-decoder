@@ -4,16 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "m.test test/*"
+    "test": "mocha test/*"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "m.test": "0.0.57"
+    "mocha": "^5.2.0"
   },
   "standard": {
     "globals": [
-      "test"
+      "describe",
+      "it"
     ]
   }
 }
